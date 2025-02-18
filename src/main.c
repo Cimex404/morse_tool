@@ -9,8 +9,11 @@ int	main(int ac, char **av)
 	while (i < ac)
 	{
 		translation = morse(av[i]);
-		printf("%s\n", translation);
-		free(translation);
+		if (translation)
+		{
+			printf("%s\n", translation);
+			free(translation);
+		}
 		i ++;
 	}
 	return (0);
